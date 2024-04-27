@@ -5,7 +5,6 @@ int main() {
 	double valueInput; // Saves any number from user to pass into methods
 	string stringInput;	// Saves any string to pass into methods
 	int choice;	// To save the choice from user in menu
-	int choiceID; // to save the number in case 5 (removing expenses or income)
 	Budget userBudget;
 
 	cout << "Enter Your salary: ";
@@ -19,7 +18,7 @@ int main() {
 		cout << "2. Add Expense" << endl;
 		cout << "3. Add Income" << endl;
 		cout << "4. Display Summary" << endl;
-		cout << "5. Remove an Expense/Income" << endl;
+		cout << "5. Remove Last Expense/Income" << endl;
 		cout << "6. Exit" << endl;
 		cout << "Enter Your Choice: ";
 
@@ -50,9 +49,7 @@ int main() {
 
 			break;
 		case 5:
-			cout << "Enter The ID of the operation: ";
-			cin >> choiceID;
-			userBudget.removeExpense(choiceID);
+			userBudget.removeExpense();
 			break;
 		case 6:		// if choose 6(exit) then print summary before exit
 			// no break to print the summary
