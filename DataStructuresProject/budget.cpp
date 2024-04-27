@@ -37,6 +37,11 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
     temp->amount = value;
     rBudget += value;
 
+    if (type)
+        cout << "Income added successfully" << endl;
+    else
+        cout << "Expense added successfully" << endl;
+
     checkBalance();
 
     
