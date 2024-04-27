@@ -41,6 +41,7 @@ public:
 
 	//void menu();
 
+	void modifyExpInc(int); // change the category and amount of selected node by id parameter
 
 };
 
