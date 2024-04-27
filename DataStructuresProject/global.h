@@ -37,7 +37,7 @@ public:
 	void summary();
 
 	// By Eyad
-	void removeExpense(int); //
+	void removeExpense(); // remove the last income / expense in list
 
 	//void menu();
 
