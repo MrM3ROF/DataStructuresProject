@@ -16,4 +16,6 @@ void Budget::summary() {
 }
 
 // By Eyad
-void Budget::removeExpense(int);
+void Budget::removeExpense(int) {
+	cout << endl;
+}
