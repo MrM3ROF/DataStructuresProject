@@ -11,7 +11,9 @@ void Budget::modifySalary(double);// change the salary data member
 void Budget::addExpInc(double, string, bool); // use the checkBalance() method to give warnings
 
 // By AL-saif
-void Budget::summary();
+void Budget::summary() {
+	cout << "hi";
+}
 
 // By Eyad
 void Budget::removeExpense(int);
