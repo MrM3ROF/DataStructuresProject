@@ -20,6 +20,7 @@ private:
 public:
 	Budget() {
 		head = tail = NULL;
+		rBudget = 0;
 	}
 	// By hammad
 	bool checkBalance();
