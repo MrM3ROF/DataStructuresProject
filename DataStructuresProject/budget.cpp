@@ -16,11 +16,12 @@ void Budget::modifySalary(double) { // change the salary data member
 	
 }
 // adding income and expnses -- By Bulaihi
-void Budget::addExpInc(double, string, bool); // use the checkBalance() method to give warnings
+void Budget::addExpInc(double, string, bool) { // use the checkBalance() method to give warnings
 
+}
 // By AL-saif
 void Budget::summary() {
-	
+
 }
 
 // By Eyad
