@@ -1,1 +1,4 @@
-#pragma once
+#ifndef global
+
+
+#endif // !1
