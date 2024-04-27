@@ -1,17 +1,17 @@
 #include "global.h"
 
-bool checkBalance();
+bool Budget::checkBalance();
 
-void savings(); //Phase 3 and files manipluation
+void Budget::savings(); //Phase 3 and files manipluation
 
 // By hammad
-void modifySalary(double);  // change the salary data member
+void Budget::modifySalary(double);// change the salary data member
 
 // adding income and expnses -- By Bulaihi
-void addExpInc(double, string, bool); // use the checkBalance() method to give warnings
+void Budget::addExpInc(double, string, bool); // use the checkBalance() method to give warnings
 
 // By AL-saif
-void summary();
+void Budget::summary();
 
 // By Eyad
-void removeExpense(int);
+void Budget::removeExpense(int);
