@@ -13,6 +13,7 @@ void Budget::addExpInc(double, string, bool); // use the checkBalance() method t
 // By AL-saif
 void Budget::summary() {
 	cout << "hi";
+	cout << "hello";
 }
 
 // By Eyad
