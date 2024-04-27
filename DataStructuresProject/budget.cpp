@@ -57,3 +57,7 @@ void Budget::summary() {
 void Budget::removeExpense() {
 	
 }
+// By Muhannad
+void Budget::modifyExpInc(int id) {
+
+}
