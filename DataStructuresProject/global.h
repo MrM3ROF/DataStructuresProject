@@ -2,8 +2,12 @@
 #define GLOBAL_H
 #include <iostream>
 #include <string>
+#include <windows.h>
 
 using namespace std;
+
+HANDLE console_color = GetStdHandle(
+	STD_OUTPUT_HANDLE);
 
 class Budget {
 
@@ -44,6 +48,9 @@ public:
 	void modifyExpInc(int); // change the category and amount of selected node by id parameter
 
 };
+
+void printColored(string,int); // use it to print in colors
+							  // 2 for green | 4 for red
 
 
 	

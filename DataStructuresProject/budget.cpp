@@ -48,7 +48,7 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
 }
 // By AL-saif
 void Budget::summary() {
-    //Put dollar sign and try to colorize the income and expense
+    //Put dollar sign and try to colorize the income and expense (using printColored(string, int))
     // if it's expense put the minus before the dollar sign (-$500)
     //Check the link sent in discord
 }
