@@ -60,7 +60,27 @@ void Budget::summary() {
 
 // By Eyad
 void Budget::removeExpense() {
-	
+    if (head == NULL) {
+        cout << "No expenses to remove!" << endl;
+        return;
+    }
+
+    expense* temp = head;
+    if (head == tail) { // only one node in the list
+        rBudget -= temp->amount;
+        delete temp;
+        head = tail = NULL;
+    }
+    else {
+        while (temp->next != tail) {
+            temp = temp->next;
+        }
+        rBudget -= tail->amount;
+        delete tail;
+        tail = temp;
+        tail->next = NULL;
+    }
+    cout << "Last expense removed successfully!" << endl;
 }
 // By Muhannad
 void Budget::modifyExpInc(int id) {
