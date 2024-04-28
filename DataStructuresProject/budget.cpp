@@ -56,6 +56,26 @@ void Budget::summary() {
     //Put dollar sign and try to colorize the income and expense (using printColored(string, int))
     // if it's expense put the minus before the dollar sign (-$500)
     //Check the link sent in discord
+
+    cout << "Expenses:" << endl;
+    
+    if (head != NULL) {
+        cout << "Category               Amount" << endl;
+        cout << "--------------------------" << endl;
+        expense* temp = head;
+        while (temp != NULL) {
+            cout << temp->category << "               ";
+            cout << temp->amount << endl;
+            temp = temp->next;
+        }
+    }
+    else
+        cout << "No Expenses" << endl;
+
+    cout << "--------------------------" << endl;
+    cout << "Total Expenses         " << rBudget << endl;
+    cout << "Remaining Budget         " << rBudget -  << endl;
+        return;
 }
 
 // By Eyad
