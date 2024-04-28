@@ -17,6 +17,11 @@ void Budget::modifySalary(double) { // change the salary data member
 
 // adding income and expnses -- By Bulaihi
 void Budget::addExpInc(double value, string cat, bool type) { // use the checkBalance() method to give warnings
+
+    if (!type && rBudget - value <= 0) { // When expense is bigger than current balance then don't allow to add it
+        printColored("Your balance is low! You can't add more expenses", 4);
+        return;
+    }
     expense *temp  = new expense;
     if(temp == NULL) {
         cout<<"Storage is Full !!"<<endl;
@@ -48,7 +53,7 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
 }
 // By AL-saif
 void Budget::summary() {
-    //Put dollar sign and try to colorize the income and expense
+    //Put dollar sign and try to colorize the income and expense (using printColored(string, int))
     // if it's expense put the minus before the dollar sign (-$500)
     //Check the link sent in discord
 }
@@ -59,5 +64,31 @@ void Budget::removeExpense() {
 }
 // By Muhannad
 void Budget::modifyExpInc(int id) {
-
+    expense* temp = head;
+    int choice;
+    string newString;
+    double newAmount;
+    if (temp == NULL) {
+        cout << "There is no expenses nor Incomes to modify!" << endl;
+    }
+    else {
+        while (temp != NULL) {
+            if (temp->expenseID == id) {
+                cout << "Change to 1-Income or 2-Expense: ";
+                cin >> choice;
+                cout << " Enter new category: ";
+                cin >> newString;
+                cout << "Enter new amount: ";
+                cin >> newAmount;
+                rBudget = rBudget - temp->amount;
+                temp->amount = newAmount;
+                rBudget = rBudget + temp->amount;
+                temp->category = newString;
+                printColored("Operation is modified successfully", 2);
+                return;
+            }
+            temp = temp->next;
+        }
+        printColored("The ID doesn't exist", 4);
+    }
 }
