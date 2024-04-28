@@ -17,6 +17,11 @@ void Budget::modifySalary(double) { // change the salary data member
 
 // adding income and expnses -- By Bulaihi
 void Budget::addExpInc(double value, string cat, bool type) { // use the checkBalance() method to give warnings
+
+    if (!type && rBudget - value <= 0) { // When expense is bigger than current balance then don't allow to add it
+        printColored("Your balance is low! You can't add more expenses", 4);
+        return;
+    }
     expense *temp  = new expense;
     if(temp == NULL) {
         cout<<"Storage is Full !!"<<endl;
