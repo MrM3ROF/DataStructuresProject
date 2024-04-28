@@ -48,9 +48,9 @@ public:
 	void modifyExpInc(int); // change the category and amount of selected node by id parameter
 
 };
-
-void printColored(string,int); // use it to print in colors
-							  // 2 for green | 4 for red
+// use it to print in colors (2 for green | 4 for red)
+void printColored(string,int); 
+							  
 
 
 	

@@ -59,5 +59,31 @@ void Budget::removeExpense() {
 }
 // By Muhannad
 void Budget::modifyExpInc(int id) {
-
+    expense* temp = head;
+    int choice;
+    string newString;
+    double newAmount;
+    if (temp == NULL) {
+        cout << "There is no expenses nor Incomes to modify!" << endl;
+    }
+    else {
+        while (temp != NULL) {
+            if (temp->expenseID == id) {
+                cout << "Change to 1-Income or 2-Expense: ";
+                cin >> choice;
+                cout << " Enter new category: ";
+                cin >> newString;
+                cout << "Enter new amount: ";
+                cin >> newAmount;
+                rBudget = rBudget - temp->amount;
+                temp->amount = newAmount;
+                rBudget = rBudget + temp->amount;
+                temp->category = newString;
+                printColored("Operation is modified successfully", 2);
+                return;
+            }
+            temp = temp->next;
+        }
+        printColored("The ID doesn't exist", 4);
+    }
 }
