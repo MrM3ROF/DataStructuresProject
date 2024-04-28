@@ -80,9 +80,14 @@ void Budget::modifyExpInc(int id) {
                 cin >> newString;
                 cout << "Enter new amount: ";
                 cin >> newAmount;
-                rBudget = rBudget - temp->amount;
+                newAmount = (choice == 1) ? newAmount : newAmount * -1;
+                if (rBudget + newAmount <= 0) { // When expense is bigger than current balance then don't allow to add it
+                    printColored("Your balance is low! You can't add more expenses", 4);
+                    return;
+                }
+                rBudget = rBudget - temp->amount; // deleting the old amount from budget
                 temp->amount = newAmount;
-                rBudget = rBudget + temp->amount;
+                rBudget = rBudget + temp->amount; // adding new amount to budget
                 temp->category = newString;
                 printColored("Operation is modified successfully", 2);
                 return;
