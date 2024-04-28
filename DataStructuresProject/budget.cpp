@@ -75,7 +75,7 @@ void Budget::summary() {
     cout << "--------------------------" << endl;
     cout << "Total Expenses         " << rBudget << endl;
     cout << "Remaining Budget         " << rBudget -  << endl;
-        return;
+        return 0;
 }
 
 // By Eyad
