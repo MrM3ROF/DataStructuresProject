@@ -11,7 +11,7 @@ HANDLE console_color = GetStdHandle(STD_OUTPUT_HANDLE);
 class Budget {
 
 private:
-	double rBudget;
+	double rBudget = 0;
 	double salary;
 	struct expense {
 		int expenseID;
@@ -23,7 +23,7 @@ private:
 public:
 	Budget() {
 		head = tail = NULL;
-		rBudget = 0;
+		
 	}
 	// By hammad
 	bool checkBalance();
