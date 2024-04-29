@@ -20,12 +20,12 @@ void Budget::modifySalary(double nSalary) { // change the salary data member
 void Budget::addExpInc(double value, string cat, bool type) { // use the checkBalance() method to give warnings
     calcTotal();
     if (!type && rBudget - value <= 0) { // When expense is bigger than current balance then don't allow to add it
-        printColored("Your balance is low! You can't add more expenses", 4);
+        printColored("Your balance is low! You can't add more expenses", 12);
         return;
     }
     expense *temp  = new expense;
     if(temp == NULL) {
-        cout<<"Storage is Full !!"<<endl;
+        printColored("Storage is full!", 12);
         return;
     }
     if (!type) {
@@ -47,11 +47,11 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
     
 
     if (type)
-        cout << "Income added successfully" << endl;
+       printColored("Income added successfully",10);
     else
-        cout << "Expense added successfully" << endl;
+       printColored("Expense added successfully",10);
 
-    if (checkBalance()) cout << "Warning! Budget Is Too Low!" << endl; //Warning of low budget
+    if (checkBalance()) printColored("Warning! Budget Is Too Low!",12); //Warning of low budget
 
     
 }
@@ -65,7 +65,7 @@ void Budget::summary() {
     cout << "Summary: " << endl;
     if (head != NULL) {
         cout << "ID\tCategory\tAmount" << endl;
-        cout << "--------------------------" << endl;
+        cout << "------------------------------" << endl;
         expense* temp = head;
         int p = 7;
         while (temp != NULL) {
@@ -73,12 +73,12 @@ void Budget::summary() {
             
             if (temp->amount < 0) {
                 
-                cout << RED << temp->expenseID << "\t"<< setw(6) << temp->category << setw(6) << "\t" <<  "-$" << (temp->amount * -1) << RESET << endl;
+                cout << RED << temp->expenseID << "\t"<< setw(7) << temp->category << setw(7) << "\t" <<  "-$" << (temp->amount * -1) << RESET << endl;
 
             }
             else {
                 
-                cout <<GREEN <<  temp->expenseID << "\t" << setw(6) << temp->category << setw(6) << "\t" << " $" << (temp->amount) <<RESET<< endl;
+                cout <<GREEN <<  temp->expenseID << "\t" << setw(7) << temp->category << setw(7) << "\t" << " $" << (temp->amount) <<RESET<< endl;
             }
             temp = temp->next;
        }
@@ -87,7 +87,7 @@ void Budget::summary() {
     else
         cout << "No Expenses" << endl;
 
-    cout <<  "--------------------------" << endl;
+    cout <<  "------------------------------" << endl;
     cout <<  "Total Expenses         " << RED << "-$" << totalExp << RESET << endl;
     cout <<  "Total Income            " << GREEN <<"$" << (totalInc + salary) << RESET << endl;
     cout << "Remaining Budget        "<<"$" << rBudget << endl;
@@ -97,7 +97,7 @@ void Budget::summary() {
 // By Eyad
 void Budget::removeExpense() {
     if (head == NULL) {
-        cout << "No expenses to remove!" << endl;
+        printColored("No expenses to remove!", 12);
         return;
     }
 
@@ -117,8 +117,8 @@ void Budget::removeExpense() {
         tail->next = NULL;
     }
     
-    cout << "Last expense removed successfully!" << endl;
-    if (checkBalance()) cout << "Warning! Budget Is Too Low!" << endl;
+    printColored("Last expense removed successfully!",10);
+    if (checkBalance()) printColored("Warning! Budget Is Too Low!", 12);
 }
 // By Muhannad
 void Budget::modifyExpInc(int id) {
@@ -127,7 +127,7 @@ void Budget::modifyExpInc(int id) {
     string newString;
     double newAmount;
     if (temp == NULL) {
-        cout << "There is no expenses nor Incomes to modify!" << endl;
+       printColored("There is no expenses nor Incomes to modify!",12);
     }
     else {
         while (temp != NULL) {
@@ -140,7 +140,7 @@ void Budget::modifyExpInc(int id) {
                 cin >> newAmount;
                 newAmount = (choice == 1) ? newAmount : newAmount * -1;
                 if (rBudget + newAmount <= 0) { // When expense is bigger than current balance then don't allow to add it
-                    printColored("Your balance is low! You can't add more expenses", 4);
+                    printColored("Your balance is low! You can't add more expenses", 12);
                     return;
                 }
                  // deleting the old amount from budget
@@ -148,7 +148,7 @@ void Budget::modifyExpInc(int id) {
                 // adding new amount to budget
                 temp->category = newString;
                 printColored("Operation is modified successfully", 2);
-                if (checkBalance()) cout << "Warning! Budget Is Too Low!" << endl;
+                if (checkBalance()) printColored("Warning! Budget Is Too Low!", 12);
                 return;
             }
             temp = temp->next;
