@@ -70,8 +70,8 @@ void Budget::summary() {
 
     cout << "--------------------------" << endl;
     cout << "Total Expenses         " << rBudget << endl;
-    cout << "Remaining Budget         " << rBudget -  << endl;
-        return 0;
+    cout << "Remaining Budget         " << rBudget << endl;
+        return ;
 }
 
 // By Eyad
