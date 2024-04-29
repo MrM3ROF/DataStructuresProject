@@ -13,6 +13,8 @@ class Budget {
 private:
 	double rBudget = 0;
 	double salary = 0;
+	double totalExpense = 0;
+	double totalIncome = 0;
 	struct expense {
 		int expenseID;
 		double amount;

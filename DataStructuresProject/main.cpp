@@ -15,13 +15,12 @@ int main() {
 
 	do {
 		cout << "\tBudget Tracker" << endl;
-		cout << "1. Modify Salary" << endl;
-		cout << "2. Add Expense" << endl;
-		cout << "3. Add Income" << endl;
-		cout << "4. Display Summary" << endl;
-		cout << "5. Remove Last Expense/Income" << endl;
-		cout << "6. Modify An Income/Expense By ID" << endl;
-		cout << "7. Exit" << endl;
+		cout << "1. Add Expense" << endl;
+		cout << "2. Add Income" << endl;
+		cout << "3. Display Summary" << endl;
+		cout << "4. Remove Last Expense/Income" << endl;
+		cout << "5. Modify An Income/Expense By ID" << endl;
+		cout << "6. Exit" << endl;
 		cout << "Enter Your Choice: ";
 
 		cin >> choice;
@@ -29,12 +28,6 @@ int main() {
 		switch (choice)
 		{
 		case 1:
-			cout << "Enter Your salary: ";
-			cin >> valueInput;
-
-			userBudget.modifySalary(valueInput);
-			break;
-		case 2:
 			cout << " Enter Expense category: ";
 			cin >> stringInput;
 			cout << "Enter Expense amount: ";
@@ -42,7 +35,7 @@ int main() {
 			userBudget.addExpInc(valueInput, stringInput, false); // false for expenses
 
 			break;
-		case 3:
+		case 2:
 			cout << " Enter Income category: ";
 			cin >> stringInput;
 			cout << "Enter Income amount: ";
@@ -50,23 +43,23 @@ int main() {
 			userBudget.addExpInc(valueInput, stringInput, true); // true for incomes
 
 			break;
-		case 5:
+		case 4:
 			userBudget.removeExpense();
 			break;
-		case 6:
+		case 5:
 			cout << "Enter ID of Income/Expense to modify: ";
 			cin >> choosenID;
 			userBudget.modifyExpInc(choosenID);
 			break;
-		case 7:		// if user choose 7 to exit then print summary before exit
+		case 6:		// if user choose 6 to exit then print summary before exit
 			// no break to print the summary
-		case 4:
+		case 3:
 			userBudget.summary();
 			break;
-		default: // If user enter something not from (1-7) 
+		default: // If user enter something not from (1-6) 
 			cout << "Wrong input, Try again :)" << endl;
 			break;
 		}
 
-	} while (choice != 7);
+	} while (choice != 6);
 }

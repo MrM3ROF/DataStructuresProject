@@ -9,6 +9,7 @@ bool Budget::checkBalance() {
 //Take double and update the salary -- By hammad
 void Budget::modifySalary(double nSalary) { // change the salary data member
     salary = nSalary;
+    rBudget += salary;
 }
 
 // adding income and expnses -- By Bulaihi
@@ -23,7 +24,11 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
         cout<<"Storage is Full !!"<<endl;
         return;
     }
-    if(!type) value = value*(-1); //change the value according to its type income or expense
+    if (!type) {
+        totalExpense += value;
+        value = value * (-1); //change the value according to its type income or expense
+    }
+    else totalIncome += value;
     if (head == NULL){ //if the list is empty
         temp->expenseID = 1;
         head = tail = temp;
