@@ -13,8 +13,8 @@ class Budget {
 private:
 	double rBudget = 0;
 	double salary = 0;
-	double totalExpense = 0;
-	double totalIncome = 0;
+	double totalExp = 0;
+	double totalInc = 0;
 	struct expense {
 		int expenseID;
 		double amount;
@@ -46,6 +46,8 @@ public:
 	//void menu();
 
 	void modifyExpInc(int); // change the category and amount of selected node by id parameter
+
+	void calcTotal();
 
 };
 // use it to print in colors (2 for green | 4 for red)
