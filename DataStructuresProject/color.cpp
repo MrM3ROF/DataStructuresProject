@@ -11,3 +11,4 @@ void printColored(string text, int p) {
 	SetConsoleTextAttribute(	// change it back to white
 		console_color, 7);
 }
+

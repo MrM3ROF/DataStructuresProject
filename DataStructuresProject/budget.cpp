@@ -1,4 +1,6 @@
 #include "global.h"
+
+
 // return true if Budget is less than 200 -- By hammad
 bool Budget::checkBalance() {
     calcTotal();
@@ -60,20 +62,32 @@ void Budget::summary() {
         cout << "Expenses:" << endl;
     
     if (head != NULL) {
-        cout << "Category               Amount" << endl;
+        cout << "ID\tCategory\t\tAmount" << endl;
         cout << "--------------------------" << endl;
         expense* temp = head;
+        int p = 7;
         while (temp != NULL) {
-            cout << temp->category << "               ";
-            cout << temp->amount << endl;
+            
+            
+            if (temp->amount < 0) {
+                
+                cout<< RED << temp->expenseID << '\t' << temp->category << "\t\t-$" << (temp->amount* -1) << RESET << endl;
+
+            }
+            else {
+                
+                cout<<GREEN << temp->expenseID << '\t' << temp->category << "\t\t$" << (temp->amount) <<RESET<< endl;
+            }
             temp = temp->next;
-        }
+       }
+       
     }
     else
         cout << "No Expenses" << endl;
 
     cout << "--------------------------" << endl;
-    cout << "Total Expenses         " << rBudget << endl;
+    cout << "Total Expenses         " << totalExp << endl;
+    cout << "Total Income         " << (totalInc + salary) << endl;
     cout << "Remaining Budget         " << rBudget << endl;
         return ;
 }

@@ -60,6 +60,7 @@ int main() {
 			cout << "Wrong input, Try again :)" << endl;
 			break;
 		}
+		cout << endl;
 
 	} while (choice != 6);
 }
