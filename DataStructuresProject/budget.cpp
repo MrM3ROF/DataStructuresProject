@@ -1,18 +1,14 @@
 #include "global.h"
-// By hammad
+// return true if Budget is less than 200 -- By hammad
 bool Budget::checkBalance() {
-
-
-
-}
-
-void Budget::savings() { //Phase 3 and files manipluation
-
+    if (rBudget <= 200)return true;
+    return false;
 
 }
-// By hammad
-void Budget::modifySalary(double) { // change the salary data member
-	
+
+//Take double and update the salary -- By hammad
+void Budget::modifySalary(double nSalary) { // change the salary data member
+    salary = nSalary;
 }
 
 // adding income and expnses -- By Bulaihi
@@ -47,7 +43,7 @@ void Budget::addExpInc(double value, string cat, bool type) { // use the checkBa
     else
         cout << "Expense added successfully" << endl;
 
-    checkBalance();
+    if (checkBalance()) cout << "Warning! Budget Is Too Low!" << endl; //Warning of low budget
 
     
 }

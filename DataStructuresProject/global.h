@@ -6,8 +6,7 @@
 
 using namespace std;
 
-HANDLE console_color = GetStdHandle(
-	STD_OUTPUT_HANDLE);
+HANDLE console_color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 class Budget {
 
@@ -29,7 +28,6 @@ public:
 	// By hammad
 	bool checkBalance();
 
-	void savings(); //Phase 3 and files manipluation
 
 	// By hammad
 	void modifySalary(double);  // change the salary data member
