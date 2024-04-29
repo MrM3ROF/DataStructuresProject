@@ -33,6 +33,17 @@ public:
 		head = tail = NULL;
 		
 	}
+	~Budget() { // by Al_saif
+
+		expense *temp = head;
+
+		while (head != NULL) {
+			temp = head->next;
+			delete head;
+			head = temp;
+		}
+
+	}
 	// By hammad
 	bool checkBalance();
 

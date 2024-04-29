@@ -64,4 +64,6 @@ int main() {
 		cout << endl;
 
 	} while (choice != '6');
+	userBudget.~Budget();
+
 }
