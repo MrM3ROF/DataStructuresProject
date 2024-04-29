@@ -4,7 +4,7 @@
 int main() {
 	double valueInput; // Saves any number from user to pass into methods
 	string stringInput;	// Saves any string to pass into methods
-	int choice;	// To save the choice from user in menu
+	char choice;	// To save the choice from user in menu
 	Budget userBudget;
 	int choosenID;
 
@@ -15,7 +15,7 @@ int main() {
 
 	do {
 		cout << endl;
-		cout << "\tBudget Tracker" << endl;
+		cout << "-Budget Tracker-" << endl;
 		cout << "1. Add Expense" << endl;
 		cout << "2. Add Income" << endl;
 		cout << "3. Display Summary" << endl;
@@ -28,33 +28,33 @@ int main() {
 
 		switch (choice)
 		{
-		case 1:
-			cout << " Enter Expense category: ";
+		case '1':
+			cout << "Enter Expense category: ";
 			cin >> stringInput;
 			cout << "Enter Expense amount: ";
 			cin >> valueInput;
 			userBudget.addExpInc(valueInput, stringInput, false); // false for expenses
 
 			break;
-		case 2:
-			cout << " Enter Income category: ";
+		case '2':
+			cout << "Enter Income category: ";
 			cin >> stringInput;
 			cout << "Enter Income amount: ";
 			cin >> valueInput;
 			userBudget.addExpInc(valueInput, stringInput, true); // true for incomes
 
 			break;
-		case 4:
+		case '4':
 			userBudget.removeExpense();
 			break;
-		case 5:
+		case '5':
 			cout << "Enter ID of Income/Expense to modify: ";
 			cin >> choosenID;
 			userBudget.modifyExpInc(choosenID);
 			break;
-		case 6:		// if user choose 6 to exit then print summary before exit
+		case '6':		// if user choose 6 to exit then print summary before exit
 			// no break to print the summary
-		case 3:
+		case '3':
 			userBudget.summary();
 			break;
 		default: // If user enter something not from (1-6) 
@@ -63,5 +63,5 @@ int main() {
 		}
 		cout << endl;
 
-	} while (choice != 6);
+	} while (choice != '6');
 }

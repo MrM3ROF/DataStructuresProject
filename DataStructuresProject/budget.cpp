@@ -13,6 +13,7 @@ bool Budget::checkBalance() {
 //Take double and update the salary -- By hammad
 void Budget::modifySalary(double nSalary) { // change the salary data member
     salary = nSalary;
+    calcTotal();
 }
 
 // adding income and expnses -- By Bulaihi
@@ -59,6 +60,7 @@ void Budget::summary() {
     //Put dollar sign and try to colorize the income and expense (using printColored(string, int))
     // if it's expense put the minus before the dollar sign (-$500)
     //Check the link sent in discord
+    
     cout << endl;
     cout << "Summary: " << endl;
     if (head != NULL) {
@@ -71,12 +73,12 @@ void Budget::summary() {
             
             if (temp->amount < 0) {
                 
-                cout << RED << temp->expenseID << "\t" << temp->category << setw(20) << "-$" << (temp->amount * -1) << RESET << endl;
+                cout << RED << temp->expenseID << "\t"<< setw(6) << temp->category << setw(6) << "\t" <<  "-$" << (temp->amount * -1) << RESET << endl;
 
             }
             else {
                 
-                cout<<GREEN << temp->expenseID << '\t' << temp->category << setw(20) << "$" << (temp->amount) <<RESET<< endl;
+                cout <<GREEN <<  temp->expenseID << "\t" << setw(6) << temp->category << setw(6) << "\t" << " $" << (temp->amount) <<RESET<< endl;
             }
             temp = temp->next;
        }
@@ -85,10 +87,10 @@ void Budget::summary() {
     else
         cout << "No Expenses" << endl;
 
-    cout << "--------------------------" << endl;
-    cout << "Total Expenses         -$" << totalExp << endl;
-    cout << "Total Income           $" << (totalInc + salary) << endl;
-    cout << "Remaining Budget         " << rBudget << endl;
+    cout <<  "--------------------------" << endl;
+    cout <<  "Total Expenses         " << RED << "-$" << totalExp << RESET << endl;
+    cout <<  "Total Income            " << GREEN <<"$" << (totalInc + salary) << RESET << endl;
+    cout << "Remaining Budget        "<<"$" << rBudget << endl;
         return ;
 }
 

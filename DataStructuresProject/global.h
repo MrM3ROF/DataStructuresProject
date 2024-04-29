@@ -6,8 +6,9 @@
 #include <iomanip>
 
 #define RESET       "\033[0m"
-#define GREEN       "\033[32m"
 #define RED         "\033[31m"
+#define GREEN       "\033[32m"
+
 
 using namespace std;
 
