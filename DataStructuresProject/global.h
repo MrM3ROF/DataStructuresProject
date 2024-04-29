@@ -12,7 +12,7 @@ class Budget {
 
 private:
 	double rBudget = 0;
-	double salary;
+	double salary = 0;
 	struct expense {
 		int expenseID;
 		double amount;
