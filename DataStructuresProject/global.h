@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <iomanip>
 
 #define RESET       "\033[0m"
 #define GREEN       "\033[32m"

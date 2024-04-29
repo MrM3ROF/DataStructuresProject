@@ -14,6 +14,7 @@ int main() {
 	userBudget.modifySalary(valueInput);
 
 	do {
+		cout << endl;
 		cout << "\tBudget Tracker" << endl;
 		cout << "1. Add Expense" << endl;
 		cout << "2. Add Income" << endl;

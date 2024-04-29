@@ -59,10 +59,10 @@ void Budget::summary() {
     //Put dollar sign and try to colorize the income and expense (using printColored(string, int))
     // if it's expense put the minus before the dollar sign (-$500)
     //Check the link sent in discord
-        cout << "Expenses:" << endl;
-    
+    cout << endl;
+    cout << "Summary: " << endl;
     if (head != NULL) {
-        cout << "ID\tCategory\t\tAmount" << endl;
+        cout << "ID\tCategory\tAmount" << endl;
         cout << "--------------------------" << endl;
         expense* temp = head;
         int p = 7;
@@ -71,12 +71,12 @@ void Budget::summary() {
             
             if (temp->amount < 0) {
                 
-                cout<< RED << temp->expenseID << '\t' << temp->category << "\t\t-$" << (temp->amount* -1) << RESET << endl;
+                cout << RED << temp->expenseID << "\t" << temp->category << setw(20) << "-$" << (temp->amount * -1) << RESET << endl;
 
             }
             else {
                 
-                cout<<GREEN << temp->expenseID << '\t' << temp->category << "\t\t$" << (temp->amount) <<RESET<< endl;
+                cout<<GREEN << temp->expenseID << '\t' << temp->category << setw(20) << "$" << (temp->amount) <<RESET<< endl;
             }
             temp = temp->next;
        }
@@ -86,8 +86,8 @@ void Budget::summary() {
         cout << "No Expenses" << endl;
 
     cout << "--------------------------" << endl;
-    cout << "Total Expenses         " << totalExp << endl;
-    cout << "Total Income         " << (totalInc + salary) << endl;
+    cout << "Total Expenses         -$" << totalExp << endl;
+    cout << "Total Income           $" << (totalInc + salary) << endl;
     cout << "Remaining Budget         " << rBudget << endl;
         return ;
 }
