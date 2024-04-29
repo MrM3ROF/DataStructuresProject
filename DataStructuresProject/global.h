@@ -6,7 +6,7 @@
 
 using namespace std;
 
-HANDLE console_color = GetStdHandle(STD_OUTPUT_HANDLE);
+
 
 class Budget {
 
