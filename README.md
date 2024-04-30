@@ -1,70 +1,58 @@
-1. Introduction :- 
+Introduction
 
-We chose the budget tracker as a project. Which aims to provide a tool for students to manage their income and expenses. The program should offer basic and important functionalities for tracking income, categorizing expenses, and calculating the budget. 
+We have chosen to develop a budget tracker as a project. This program will provide students with a tool to effectively track their income and expenses. The application will offer basic functionalities for:
 
-2. Requirements :- 
-1) Inputs : 
+Recording income
+Categorizing expenses
+Calculating remaining budget
+Requirements
 
-\*Income: users will first enter their monthly salary and after that he can add any additional income to their budget plus the category of income. 
+Inputs
 
-\*Expense: Also, users will be able to enter expenses with their categories and amounts to track all transactions at the end. 
+Income: Users can enter their monthly salary as initial income. Additionally, they can add any further income throughout the month, specifying the category for each entry.
+Expense: Users can record expenses by entering the amount, category, and a unique identifier. This allows them to track all transactions effectively.
+Income/Expense ID: Users can modify existing transactions by providing the associated ID. This allows them to change the amount, category, or even switch between an income and expense entry.
+Outputs
 
-\*Income / Expense ID: Users can modify any transaction by entering its ID to change the amount, category, or the type of it (Expense or Income).  
+Summary: The program will display a well-formatted summary of all transactions, including:
+Total income
+Total expense
+Current balance (Total Income - Total Expense)
+Listing of all income and expense entries with their respective IDs and categories.
+Warnings: A notification will appear if the remaining budget falls below a set limit (e.g., $200).
+Error Handling: The program will implement basic error handling for invalid user inputs. Users will be prompted to re-enter the correct information.
+Functionalities
 
-2) Outputs : 
+Main Menu
 
-\*Summary: The program will show the summary of all transactions in a well-formatted way with the following information: 
+The program will present a menu with the following options:
 
--Total Income 
+Enter Income
+Enter Expense
+Delete Last Entry (Income or Expense)
+Modify Existing Entry (Income or Expense)
+Print Summary
+Exit
+Entering Income and Expense
 
--Total Expense 
+The program will utilize a linked list to store income and expense details.
 
--Current balance (Total Income – Total expense) -showing ID and category of each Income and expense 
+Viewing Summary
 
-\*Warnings: If the budget reached a limit of $200, a message will appear to the user. 
+This function will calculate the total balance and display a list of all income and expense entries.
 
-\*Error handling: The program will also have a basic error handling for invalid inputs and it will prompt the user to re-enter the correct input. 
+Modifying Income or Expense
 
-3. Functionalities:- 
-1) Main Menu: 
+Users can modify existing transactions by entering the ID. This allows them to change the amount, category, or even convert the entry type (income to expense or vice versa).
 
-The Program will display a menu offering the following options: -Enter Income 
+Deleting Last Income or Expense
 
--Enter Expense 
+This feature allows users to undo their last action, such as entering a new income or expense, by deleting it from the linked list.
 
--Delete Last Expense or Income 
+Entering Salary
 
--Modify a selected expense or income 
+Upon initial program launch, users will be prompted to enter their monthly salary.
 
--Print summary 
+Exiting the Program
 
--Exit 
-
-2) Enter Expense or Income: 
-
-The program will store the income or expense details inside a linked list. 
-
-3) View Summary: 
-
-This function will calculate the total balance and it will list all income and expenses. 
-
-4) Modify Income or Expense: 
-
-The method will offer the ability to change any existed transaction to change the amount, category, or to change it to income or to expense by entering the ID of the Income/Expense. 
-
-5) Delete Last Income or Expense: 
-
-This method will give the user the opportunity to undo his last action such as entering a new income or expense by deleting it from the linked list. 
-
-6) Enter Salary: 
-
-The first thing will the user do is to enter his monthly salary.  
-
-7) Exit: 
-
-If the user wishs to terminate the program he can do that from choosing the exit option from the menu. 
-
-
-
-
-[ref1]: Aspose.Words.dfa94c00-5e48-4be4-882f-574e4bffc780.008.png
+Users can terminate the program by selecting the "Exit" option from the main menu.
