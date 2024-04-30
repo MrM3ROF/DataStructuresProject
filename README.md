@@ -1,6 +1,6 @@
 ## Introduction:
 
-We chose the **budget tracker** as a project, which aims to provide a tool for students to manage their income and expenses. The program should offer basic and important functionalities for tracking income, categorizing expenses, and calculating the budget.
+   We chose the **budget tracker** as a project, which aims to provide a tool for students to manage their income and expenses. The program should offer basic and important functionalities for tracking income, categorizing expenses, and calculating the budget.
 
 ## Requirements:
 
