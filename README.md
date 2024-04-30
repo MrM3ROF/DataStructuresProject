@@ -1,21 +1,21 @@
 ## Introduction:
 
-We chose the budget tracker as a project, which aims to provide a tool for students to manage their income and expenses. The program should offer basic and important functionalities for tracking income, categorizing expenses, and calculating the budget.
+We chose the **budget tracker** as a project, which aims to provide a tool for students to manage their income and expenses. The program should offer basic and important functionalities for tracking income, categorizing expenses, and calculating the budget.
 
 ## Requirements:
 
 1. **Inputs:**
-   - Income: Users will first enter their monthly salary, and after that, they can add any additional income to their budget along with the category of income.
-   - Expense: Users will be able to enter expenses with their categories and amounts to track all transactions.
-   - Income/Expense ID: Users can modify any transaction by entering its ID to change the amount, category, or type.
+   - **Income:** Users will first enter their monthly salary, and after that, they can add any additional income to their budget along with the category of income.
+   - **Expense:** Users will be able to enter expenses with their categories and amounts to track all transactions.
+   - **Income/Expense ID:** Users can modify any transaction by entering its ID to change the amount, category, or type.
 
 2. **Outputs:**
-   - Summary: The program will show the summary of all transactions in a well-formatted way with the following information:
+   - **Summary:** The program will show the summary of all transactions in a well-formatted way with the following information:
      - Total Income
      - Total Expense
      - Current balance (Total Income – Total Expense) showing ID and category of each Income and expense
-   - Warnings: If the budget reaches a limit of $200, a message will appear to the user.
-   - Error handling: The program will also have basic error handling for invalid inputs and prompt the user to re-enter the correct input.
+   - **Warnings:** If the budget reaches a limit of $200, a message will appear to the user.
+   - **Error handling:** The program will also have basic error handling for invalid inputs and prompt the user to re-enter the correct input.
 
 ## Functionalities:
 
